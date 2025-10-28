@@ -1,0 +1,296 @@
+*{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{background:#f5f5f5;font-family:Arial,Helvetica,sans-serif;color:#222}
+    a{text-decoration:none;color:inherit}
+    .container{width:90%;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px}
+
+    /* Header */
+    #header.site-header{position:fixed;top:0;left:0;width:100%;background:#fff;padding:14px 0;z-index:1000;border-bottom:1px solid rgba(0,0,0,.06);transition:.3s}
+    #header.scrolled{padding:10px 0;box-shadow:0 6px 16px rgba(0,0,0,.08);backdrop-filter:saturate(1.1) blur(4px)}
+    .logo{display:flex;align-items:center;gap:12px;white-space:nowrap;flex-shrink:0}
+    .logo img{height:40px}
+    .logo span{font-weight:800;font-size:20px;color:#1a395c;letter-spacing:.3px}
+    .nav ul{list-style:none;display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+    .nav a{font-size:15px;padding:8px 6px;position:relative}
+    .nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:#1a395c;transition:width .25s}
+    .nav a:hover::after{width:100%}
+
+    /* Sections singkat */
+    .section-title{font-size:18px;color:#1a395c;font-weight:800;margin-bottom:10px;letter-spacing:.5px}
+    .section-description{font-size:20px;color:#333;max-width:820px;margin:0 auto 42px;line-height:1.6}
+
+    .placeholder{padding:64px 0;background:#fff;border-top:1px solid #eee}
+    .placeholder h2{font-size:24px;margin-bottom:10px;color:#1a395c}
+
+    /* FAQ */
+    .faq{padding:70px 20px;background:#fff;border-top:1px solid #eee}
+    .faq .title{font-size:24px;color:#1a395c;text-align:center;margin-bottom:18px;font-weight:800}
+    .faq-list{max-width:900px;margin:0 auto;display:grid;gap:12px}
+    .faq-list details{background:#f7f8fa;border-radius:12px;box-shadow:0 8px 20px rgba(10,37,64,.06)}
+    .faq-list summary{padding:16px 20px;cursor:pointer;font-weight:800;color:#1a395c;list-style:none;position:relative}
+    .faq-list summary::-webkit-details-marker{display:none}
+    .faq-list summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:20px}
+    .faq-list details[open] summary::after{content:"–"}
+    .faq-list .answer{padding:0 20px 16px 20px;color:#444;line-height:1.7}
+
+    .cta-contact{background:linear-gradient(90deg,#102a44 0%, #1a395c 100%);color:#fff;padding:40px 0}
+    .cta-wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+    /* Footer */
+    .site-footer{background:#0f2240;color:#dbe3ee}
+    .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:28px;padding:42px 0}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);text-align:center;padding:12px 0;font-size:14px;color:#b9c6d6}
+    .site-footer .logo span {color: #ffffff !important;}
+
+    .to-top{position:fixed;right:18px;bottom:18px;opacity:0;visibility:hidden;border:none;background:#1a395c;color:#fff;width:40px;height:40px;border-radius:999px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.25);transition:.2s}
+    .to-top.show{opacity:1;visibility:visible}
+
+    /* ===== Modal Pesan Sekarang ===== */
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.5);z-index:2000;padding:20px}
+    .modal.show{display:flex}
+    .modal-card{background:#fff;border-radius:14px;max-width:560px;width:100%;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+    .modal-header{padding:16px 20px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
+    .modal-header h3{font-size:18px;color:#1a395c;font-weight:900}
+    .modal-close{background:none;border:none;font-size:22px;cursor:pointer;line-height:1}
+    .modal-body{padding:20px}
+    .field{display:grid;gap:6px;margin-bottom:14px}
+    .field label{font-weight:700;font-size:14px;color:#1a395c}
+    .field input[type="text"], .field textarea, .field input[type="file"]{
+      width:100%;border:1px solid #ddd;border-radius:10px;padding:10px 12px;font-size:14px
+    }
+    .field textarea{min-height:96px;resize:vertical}
+    .hint{font-size:12px;color:#777}
+    .modal-actions{display:flex;gap:10px;justify-content:flex-end;padding:16px 20px;border-top:1px solid #eee}
+    .btn-secondary{background:#e9eef5;color:#0f2240;border-radius:999px;padding:10px 16px;font-weight:800;cursor:pointer}
+    .btn-success{background:#0f8b2c;color:#fff;border-radius:999px;padding:10px 16px;font-weight:800;cursor:pointer}
+
+    /* ====== Cara Pemesanan ====== */
+    .order-flow{padding:70px 20px;background:#fff;border-top:1px solid #eee}
+    .order-wrap{display:flex;align-items:center;gap:40px}
+    .order-text{flex:1}
+    .order-text h2{font-size:24px;color:#1a395c;margin-bottom:12px}
+    .order-text p.lead{color:#555;margin-bottom:16px}
+    .steps{display:grid;gap:10px;margin-top:6px}
+    .step{display:flex;align-items:flex-start;gap:12px;background:#f7f8fa;border-radius:12px;padding:12px 14px;box-shadow:0 8px 20px rgba(10,37,64,.06)}
+    .num{min-width:32px;height:32px;border-radius:999px;background:#1a395c;color:#fff;display:grid;place-items:center;font-weight:800}
+    .order-media{flex:1}
+    .order-media img{width:100%;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.08);object-fit:cover}
+
+    @media (max-width:992px){
+      .cta-wrap{flex-direction:column;align-items:flex-start}
+    }
+    @media (max-width:768px){
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .order-wrap{flex-direction:column}
+    }
+    @media (max-width:520px){
+      .footer-grid{grid-template-columns:1fr}
+    }
+
+        /* Tombol Pesan Sekarang */
+    .buy-btn {
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      padding: 12px 18px;
+      border-radius: 100px;
+      background: transparent; /* tanpa isi */
+      border: 2px solid #ffffff; /* hanya garis putih */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #ffffff; /* teks putih */
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Saat hover atau klik */
+    .buy-btn:hover,
+    .buy-btn:focus,
+    .buy-btn:active {
+      background: #ffffff; /* isi jadi putih */
+      color: #000000; /* teks jadi hitam */
+      transform: none; /* biar tidak berubah ukuran */
+    }
+
+    /* ================= GALERI (PUTIH) ================= */
+    :root{
+      --g-bg:#ffffff; --g-card:#ffffff; --g-muted:#475569; --g-text:#0b0d10;
+      --g-ring:0 0 0 3px rgba(74,168,255,.25); --g-radius:18px;
+      --header-height: 68px;
+    }
+    .galeri-wrap{
+      width:90%;max-width:1200px;margin:0 auto;
+      padding:70px 20px;
+      background:#fff;border-top:1px solid #eee;
+      margin-top: calc(var(--header-height) + 16px);
+      scroll-margin-top: calc(var(--header-height) + 16px);
+    }
+    .galeri-wrap .title{font-size:24px;color:#1a395c;font-weight:800;margin-bottom:10px}
+    .galeri-wrap .subtitle{color:#333;margin-bottom:16px}
+
+    .featured{
+      display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:stretch;
+      background:linear-gradient(180deg, rgba(2,6,23,.03), rgba(2,6,23,.06));
+      border:1px solid rgba(15,23,42,.08);
+      padding:16px;border-radius:22px;margin:16px 0 18px
+    }
+    @media (max-width:800px){.featured{grid-template-columns:1fr}}
+    .featured img{width:100%;height:100%;min-height:220px;object-fit:cover;border-radius:16px}
+    .badge{display:inline-flex;gap:8px;background:linear-gradient(90deg,#60a5fa,#a78bfa);color:#fff;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px}
+    .btn{appearance:none;border:1px solid rgba(15,23,42,.12);background:#f8fafc;color:var(--g-text);padding:8px 14px;border-radius:999px;font-weight:600;cursor:pointer}
+    .btn:hover{box-shadow:var(--g-ring)}
+
+    .grid{column-gap:14px;column-count:3}
+    @media (max-width:1000px){ .grid{ column-count:2 } }
+    @media (max-width:600px){  .grid{ column-count:1 } }
+
+    .card{
+      display:inline-block;width:100%;margin:0 0 14px;background:var(--g-card);
+      border-radius:18px;overflow:hidden;break-inside:avoid;cursor:pointer;position:relative;
+      border:1px solid rgba(15,23,42,.08);
+    }
+    .thumb{display:block;width:100%;height:auto;transition:transform .3s}
+    .card:hover .thumb{ transform:scale(1.02) }
+    .overlay{
+      position:absolute;left:0;right:0;bottom:0;display:flex;align-items:end;padding:14px;
+      background:linear-gradient(180deg, transparent 40%, rgba(0,0,0,.55));
+    }
+    .cap{font-weight:700;color:#fff}
+
+    dialog#productDetail{
+    width:min(980px,96vw);
+    border:0;
+    padding:0;
+    background:#ffffff;
+    color:var(--g-text);
+    border-radius:20px;
+    overflow:auto; /* 🔹 memungkinkan scroll jika isi terlalu besar */
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    max-height:92dvh; /* 🔹 batasi tinggi dialog agar tetap muat di layar */
+    border:1px solid rgba(15,23,42,.12);
+}
+
+    dialog#productDetail::backdrop{background:rgba(0,0,0,.5);backdrop-filter:blur(2px)}
+    .pd-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid rgba(15,23,42,.12)}
+    .pd-body{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;padding:16px}
+    @media (max-width:820px){.pd-body{grid-template-columns:1fr}}
+    .pd-main{display:block;max-width:100%;max-height:80vh;height:auto;width:auto;object-fit:contain;border-radius:14px;margin:auto;background:#f1f5f9}
+    .pd-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+    .pd-thumbs img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;cursor:pointer;border:1px solid rgba(15,23,42,.12);background:#f8fafc}
+    .pd-title{margin:0 0 6px;font-size:22px;font-weight:800}
+    .pd-desc{color:var(--g-muted);margin:0 0 14px}
+    .pd-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .close-btn{background:transparent;border:0;color:var(--g-text);font-size:22px;cursor:pointer;padding:6px;border-radius:8px}
+    .close-btn:hover{background:rgba(15,23,42,.06)}
+    /* =================== HAMBURGER MENU =================== */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #1a395c;
+    }
+
+    /* Saat layar kecil */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        transform: translateY(-120%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 999;
+      }
+      .nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      .nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+      }
+      .nav ul li {
+        width: 100%;
+      }
+      .nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        border-bottom: 1px solid #eee;
+        font-weight: 600;
+      }
+      .nav ul li a:hover {
+        background: #f5f5f5;
+      }
+    }
+/* ============ FOOTER RESPONSIVE (URUT, RATA KIRI, COPYRIGHT TENGAH) ============ */
+@media (max-width: 768px) {
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* semua konten footer rata kiri */
+    text-align: left;
+    gap: 24px;
+  }
+
+  /* Urutan: 1. Kontak, 2. Jelajahi, 3. ADJISURYA */
+  .footer-grid > div:nth-child(3) {
+    order: 1; /* Kontak paling atas */
+  }
+  .footer-grid > nav {
+    order: 2; /* Jelajahi di tengah */
+  }
+  .footer-grid > div:nth-child(1) {
+    order: 3; /* ADJISURYA di paling bawah */
+  }
+
+  /* Tampilan teks */
+  .footer-grid > * {
+    width: 100%;
+  }
+
+  .footer-grid h4 {
+    margin-bottom: 8px;
+    color: #fff;
+  }
+
+  .footer-grid ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .footer-grid a {
+    color: #dbe3ee;
+    text-decoration: none;
+  }
+
+  .footer-grid a:hover {
+    text-decoration: underline;
+  }
+
+  /* Bagian bawah tetap rata tengah */
+  .footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 0;
+    color: #b9c6d6;
+  }
+}

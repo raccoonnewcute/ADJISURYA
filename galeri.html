@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADJISURYA</title>
+  <link rel="icon" href="image/logo.PNG" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style/galeri_style.css">
+</head>
+<body>
+  <!-- Header -->
+ <header id="header" class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="image/logo.PNG" alt="Logo ADJISURYA" />
+      <span>ADJISURYA</span>
+    </a>
+
+    <!-- Tombol hamburger -->
+    <button class="menu-toggle" aria-label="Buka navigasi">
+      ☰
+    </button>
+    <nav class="nav" aria-label="Navigasi">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="index.html#tentang">Tentang</a></li>
+        <li><a href="index.html#layanan">Layanan</a></li>
+        <li><a href="index.html#produk">Produk</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- ================= G A L E R I ================= -->
+  <main id="galeri" class="galeri-wrap" aria-label="Galeri Produk">
+    <h1 class="title" style="text-transform:uppercase">Galeri Produk</h1>
+    <p class="subtitle">Berikut ini adalah beberapa produk baju yang pernah kami buat. Tentunya sesuai dengan permintaan customer.</p>
+
+    <!-- Produk Unggulan (acak) -->
+    <section class="featured" id="featured">
+      <img id="featuredImg" alt="">
+      <div>
+        <span class="badge">⭐ Produk Unggulan</span>
+        <h2 id="featuredTitle" style="margin:8px 0 6px">—</h2>
+        <p id="featuredDesc" style="margin:0 0 12px" class="subtitle">—</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" id="btnShowFeatured">Lihat Detail</button>
+          <button class="btn" id="btnReroll">Acak lagi</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Masonry Grid Produk: pakai foto lokal -->
+    <section class="grid" id="gallery">
+      <!-- Produk 1 -->
+      <figure class="card"
+        data-title="Batik Eco Print"
+        data-desc="Batik Eco Print yang diproduksi kami dan bekerja sama dengan Migran Care Kebumen"
+        data-full="image/batikEco1.jpg"
+        data-g1="image/batikEco1.jpg"
+        data-g2="image/batikEco2.jpg"
+        data-g3="image/batikEco3.jpg">
+        <img class="thumb" src="image/batikEco1.jpg" alt="Batik Eco Print">
+        <figcaption class="overlay"><span class="cap">Batik Eco Print</span></figcaption>
+      </figure>
+
+      <!-- Produk 2 -->
+      <figure class="card"
+        data-title="Kemeja Batik"
+        data-desc="Kemeja batik merupakan produk best seller para costumer yang dipercayakan kepada kami."
+        data-full="image/batik1.jpg"
+        data-g1="image/batik1.jpg"
+        data-g2="image/batik2.jpg"
+        data-g3="image/batik3.jpg">
+        <img class="thumb" src="image/batik1.jpg" alt="Kemeja Batik">
+        <figcaption class="overlay"><span class="cap">Kemeja Batik</span></figcaption>
+      </figure>
+
+      <!-- Produk 3 -->
+      <figure class="card"
+        data-title="Seragam Dinas dan Sekolah"
+        data-desc="Kami juga memprosuksi seragam Dinas dan seragam Sekolah sesuai keinginan pelanggan, seperti seragam guru, sekolah, pemerintah dan lainnya"
+        data-full="image/Seragam1.jpg"
+        data-g1="image/Seragam1.jpg"
+        data-g2="image/Seragam2.jpg"
+        data-g3="image/Seragam3.jpg">
+        <img class="thumb" src="image/Seragam1.jpg" alt="Seragam Dinas dan Sekolah">
+        <figcaption class="overlay"><span class="cap">Seragam Dinas dan Sekolah</span></figcaption>
+      </figure>
+
+      <!-- Produk 4 -->
+      <figure class="card"
+        data-title="Seragam Kerja"
+        data-desc="Seragam kerja di buat dengan teliti, rapih dan sudah sesuai SOP."
+        data-full="image/perusahaan1.jpg"
+        data-g1="image/perusahaan1.jpg"
+        data-g2="image/perusahaan2.jpg"
+        data-g3="image/perusahaan3.jpg">
+        <img class="thumb" src="image/perusahaan1.jpg" alt="Seragam Kerja">
+        <figcaption class="overlay"><span class="cap">Seragam Kerja</span></figcaption>
+      </figure>
+
+      <!-- Produk 5 -->
+      <figure class="card"
+        data-title="Baju Muslimat NU"
+        data-desc="Jasa kami sudah dipercaya oleh beberapa anggota MUSLIMAT NU Kecamatan AYAH."
+        data-full="image/muslimat1.jpg"
+        data-g1="image/muslimat1.jpg"
+        data-g2="image/muslimat2.jpg" 
+        data-g3="image/muslimat3.jpg">
+        <img class="thumb" src="image/muslimat1.jpg" alt="Baju Muslimat NUs">
+        <figcaption class="overlay"><span class="cap">Baju Muslimat NU</span></figcaption>
+      </figure>
+
+<!-- Produk 6 -->
+  <figure class="card"
+    data-title="Jas Pria/Wanita"
+    data-desc="Kami melayani pembuatan jas untuk pria dan wanita, jas organisasi dan jas almamater dengan desain custom sesuai permintaan pelanggan."
+    data-full="image/jas1.jpg"
+    data-g1="image/jas1.jpg"
+    data-g2="image/jas2.jpg"
+    data-g3="image/jas3.jpg">
+    <img class="thumb" src="image/jas1.jpg" alt="Jas Pria/Wanita">
+    <figcaption class="overlay"><span class="cap">Jas Pria/Wanita</span></figcaption>
+    </figure>
+    </section>
+  </main>
+
+  <!-- ===== Cara Pemesanan ===== -->
+  <section id="cara" class="order-flow" aria-label="Cara Pemesanan">
+    <div class="container order-wrap">
+      <div class="order-text">
+        <h2>Cara Pemesanan</h2>
+        <p class="lead">Langkah sederhana untuk mulai produksi seragam Anda bersama ADJISURYA.</p>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><div><b>Konsultasi</b> via WhatsApp/telepon terkait kebutuhan Anda.</div></div>
+          <div class="step"><div class="num">2</div><div><b>Kirim detail</b> (desain, jumlah, ukuran, bahan, deadline).</div></div>
+          <div class="step"><div class="num">3</div><div><b>Penawaran harga</b> & revisi sampai approve.</div></div>
+          <div class="step"><div class="num">4</div><div><b>Pesanan</b> langsung di buat</div></div>
+          <div class="step"><div class="num">5</div><div><b>QC & Pengiriman</b> ke alamat Anda, resi kami kirim.</div></div>
+        </div>
+      </div>
+      <div class="order-media">
+        <img src="image/pemesanan.jpg" alt="Ilustrasi cara pemesanan di ADJISURYA">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq" aria-label="Pertanyaan yang sering diajukan">
+    <h2 class="title">F.A.Q</h2>
+    <div class="faq-list">
+      <details><summary>Berapa estimasi waktu produksi?</summary><div class="answer">Rata-rata 7–21 hari kerja tergantung produk & jumlah; dikonfirmasi setelah desain & DP.</div></details>
+      <details><summary>Apakah ada minimum order (MOQ)?</summary><div class="answer">Tidak ada minimum order.</div></details>
+      <details><summary>Apakah bisa perbaikan baju atau penyesuaian?</summary><div class="answer">Ya, kami juga membuka jasa perbaikan baju atau penyesuaian sesuai kebutuhan.</div></details>
+      <details><summary>Bisa revisi desain?</summary><div class="answer">Termasuk 1–2 revisi ringan sebelum produksi.</div></details>
+      <details><summary>Apakah bisa membawa bahan baju sendiri?</summary><div class="answer">Ya, kami tidak menuntut customer untuk menggunakan bahan pilihan kami.</div></details>
+      <details><summary>Pengiriman ke seluruh Indonesia?</summary><div class="answer">Ya, via ekspedisi reguler & kargo, bisa asuransi.</div></details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="kontak" class="cta-contact">
+    <div class="container cta-wrap">
+      <div class="cta-text">
+        <h2>Butuh Penawaran Cepat?</h2>
+        <p>Hubungi kami untuk konsultasi dan estimasi biaya terbaik.</p>
+      </div>
+      <button class="buy-btn open-order" type="button">
+        <span>Pesan Sekarang 🛒</span>
+        </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo">
+          <img src="image/logo.PNG" alt="Logo ADJISURYA" />
+          <span>ADJISURYA</span>
+        </a>
+        <p>Konveksi & jahit berkualitas dari Kebumen untuk Indonesia.</p>
+      </div>
+      <nav aria-label="Tautan cepat">
+        <h4>Jelajah</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="index.html#tentang">Tentang</a></li>
+          <li><a href="index.html#layanan">Layanan</a></li>
+          <li><a href="index.html#produk">Produk</a></li>
+          <!-- Galeri & Kontak dihapus dari grup Jelajah -->
+        </ul>
+      </nav>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li>📞 <a href="tel:+6285226974905">+62 852-2697-4905</a></li>
+          <li>✉️ <a href="mailto:adjisuryafashion@gmail.com">adjisuryafashion@gmail.com</a></li>
+          <li>
+            📍
+            <a href="https://www.google.com/maps/place/Rumah+Jait+AdjiSurya/@-7.68111,109.4171587,18z/data=!3m1!4b1!4m6!3m5!1s0x2e6537fcc3fc1719:0x978af861cd02a30d!8m2!3d-7.68111!4d109.418273!16s%2Fg%2F11h_bpws3m?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D"
+               target="_blank" rel="noopener"
+               aria-label="Buka lokasi ADJISURYA di Google Maps">
+              Mangunweni, Dusun Kaliputri RT 7 RW 1, Kec. Ayah, Kab. Kebumen
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> ADJISURYA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal Data Diri -->
+  <div class="modal" id="orderModal" aria-hidden="true" role="dialog" aria-labelledby="orderTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="orderTitle">Data Diri Pemesanan</h3>
+        <button class="modal-close" aria-label="Tutup" id="orderClose">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="field">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" placeholder="Nama lengkap">
+        </div>
+        <div class="field">
+          <label for="alamat">Alamat</label>
+          <textarea id="alamat" placeholder="Alamat lengkap"></textarea>
+        </div>
+        <div class="field">
+          <label for="deskripsi">Deskripsi produk/perihal</label>
+          <textarea id="deskripsi" placeholder="Contoh: 50 kaos seragam, ukuran campur, sablon 1 warna."></textarea>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-secondary" id="orderBack">Kembali</button>
+        <button class="btn-success" id="orderSend">Pesan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Detail Dialog (Galeri) -->
+  <dialog id="productDetail">
+    <div class="pd-head">
+      <strong id="pdTitle">Detail Produk</strong>
+      <button class="close-btn" id="pdClose" aria-label="Tutup">✕</button>
+    </div>
+    <div class="pd-body">
+      <div>
+        <img id="pdMain" class="pd-main" alt="">
+        <div class="pd-thumbs">
+          <img id="pdT1" alt="Foto 1">
+          <img id="pdT2" alt="Foto 2">
+          <img id="pdT3" alt="Foto 3">
+        </div>
+      </div>
+      <div>
+        <h3 class="pd-title" id="pdTitle2">—</h3>
+        <p class="pd-desc" id="pdDesc">—</p>
+        <div class="pd-actions">
+          <button class="btn" id="pdPrev">‹ Sebelumnya</button>
+          <button class="btn" id="pdNext">Berikutnya ›</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <button id="toTop" class="to-top" aria-label="Kembali ke atas">↑</button>
+  <script src="JavaScript/galeri.js"></script>
+</body>
+</html>
